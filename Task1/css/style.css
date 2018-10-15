@@ -1,0 +1,107 @@
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 0; 
+}
+
+select {
+    padding: 5px;
+}
+
+.container {
+    margin: auto;
+    max-width: 100%;
+    width: 960px;
+}
+
+.orientation {
+    text-align: center;
+}
+
+.navigation {
+    display: inline-block;
+}
+
+.navigation li {
+    list-style-type: none;
+}
+
+.navigation li a {
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+.navigation li:hover,
+.navigation li:hover > a {
+    background-color: #06cdd4;
+    color: #ffffff;
+}
+
+.navigation:not(.vertical-view) .main-item {
+    float: left;
+}
+
+.main-item .submenu {
+    background-color: #ffffff;
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.submenu .menu-item {
+    border: 1px solid #dedede;
+}
+
+.submenu .menu-item:not(:last-child) {
+    border-bottom: 0;
+}
+
+.menu-item:hover > .submenu {
+    display: block;
+}
+
+.vertical-view .main-item .submenu,
+.main-item .submenu .submenu {
+    left: 100%;
+    top: 0;
+}
+
+.has-submenu {
+    position: relative;
+}
+
+.menu-item.has-submenu > a {
+    padding-right: 35px;
+}
+
+.has-submenu > a::after {
+    border-bottom: 4px solid transparent;
+    border-left: 4px dashed;
+    border-top: 4px solid transparent;
+    content: '';
+    margin-top: -4px;
+    position: absolute;
+    right: 15px;
+    top:50%;
+}
+
+.has-submenu > a:hover::after {
+    color: #ffffff;
+}
+
+.navigation:not(.vertical-view) .main-item.has-submenu > a::after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px dashed;
+    margin-top: -2px;
+}
+
+.clicked-link {
+    color:  #06cdd4;
+    font-weight: bold;
+    text-align: center;
+}
